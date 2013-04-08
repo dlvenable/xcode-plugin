@@ -119,6 +119,14 @@
         <f:checkbox />
     </f:entry>
 
+    <f:entry title="${%Keychain}">
+        <select class="setting-input" name="keychainName" description="Select a configuted keychain. These are configured globally.">
+            <j:forEach var="keychain" items="${descriptor.keychains}">
+                <f:option selected="${keychain.keychainName==instance.keychainName}">${keychain.keychainName}</f:option>
+            </j:forEach>
+        </select>
+    </f:entry>
+
     <f:entry title="${%Keychain path}" field="keychainPath"
    	  description="The path of the keychain to use to sign the IPA.">
    	  <f:textbox />
