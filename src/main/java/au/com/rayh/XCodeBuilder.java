@@ -570,7 +570,7 @@ public class XCodeBuilder extends Builder {
         }
 
         for (Keychain keychain : getDescriptor().getKeychains()) {
-            if(keychain.getKeychainName().equals(keychainPath))
+            if(keychain.getKeychainName().equals(keychainName))
                 return keychain;
         }
 
